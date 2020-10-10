@@ -13,25 +13,21 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Renderer for block leeloolxp_synchronizer
+ * Renderer for block block_leeloolxp_synchronizer
  *
  * @package    block_leeloolxp_synchronizer
  * @copyright  2020 @ leelolxp.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined( 'MOODLE_INTERNAL' ) || die;
+defined('MOODLE_INTERNAL') || die;
 
- /**
-  * leeloolxp_tracking block rendrer
-  *
-  * @package    block_leeloolxp_tracking
-  * @copyright  2020 leeloolxp.com
-  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-  */
-
+/**
+ * block_leeloolxp_synchronizer block attendance
+ *
+ * @copyright  2020 @ leelolxp.com
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class block_leeloolxp_synchronizer_renderer extends plugin_renderer_base {
-
 }

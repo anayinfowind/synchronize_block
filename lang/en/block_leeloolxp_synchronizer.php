@@ -15,12 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
-* Strings for component 'block_leeloolxp_synchronizer', language 'en', branch 'MOODLE_20_STABLE'
-*
-* @package   block_leeloolxp_synchronizer
-* @copyright 2020 leeloolxp.com
-* @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ * Strings for component 'block_leeloolxp_synchronizer', language 'en', branch 'MOODLE_20_STABLE'
+ *
+ * @package   block_leeloolxp_synchronizer
+ * @copyright 2020 leeloolxp.com
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 $string['pluginname'] = 'Leeloo LXP Synchronizer';
 $string['leeloolxp_licensekey_block'] = 'License ID';

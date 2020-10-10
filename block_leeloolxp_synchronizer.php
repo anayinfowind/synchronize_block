@@ -15,17 +15,11 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
-
- * class block_leeloolxp_tracking
-
+ * Renderer for block leeloolxp_synchronizer
  *
-
  * @package    block_leeloolxp_synchronizer
-
- * @copyright  2020 leeloolxp.com
-
+ * @copyright  2020 @ leelolxp.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-
  */
 defined('MOODLE_INTERNAL') || die;
 require_once( $CFG->dirroot.'/course/lib.php' );

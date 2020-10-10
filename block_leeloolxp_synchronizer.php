@@ -4,10 +4,10 @@
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
-// ( at your option ) any later version.
+// (at your option) any later version.
 //
 // Moodle is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY;without even the implied warranty of
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
@@ -16,28 +16,28 @@
 
 /**
 
-* class block_leeloolxp_tracking
+ * class block_leeloolxp_tracking
 
-*
+ *
 
-* @package    block_leeloolxp_synchronizer
+ * @package    block_leeloolxp_synchronizer
 
-* @copyright  2020 leeloolxp.com
+ * @copyright  2020 leeloolxp.com
 
-* @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
-*/
+ */
 require_once( $CFG->dirroot.'/course/lib.php' );
 /**
-* class block_leeloolxp_synchronizer
-*
-* @package    block_leeloolxp_synchronizer
+ * class block_leeloolxp_synchronizer
+ *
+ * @package    block_leeloolxp_synchronizer
 
-*
+ *
 
-* @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
-*/
+ */
 
 class block_leeloolxp_synchronizer extends block_base {
 
@@ -58,10 +58,10 @@ class block_leeloolxp_synchronizer extends block_base {
     }
 
     /**
-    * Return contents of block_leeloolxp_synchronizer block
-    *
-    * @return string of block
-    */
+     * Return contents of block_leeloolxp_synchronizer block
+     *
+     * @return string of block
+     */
 
     public function  get_content() {
 
@@ -157,10 +157,10 @@ class block_leeloolxp_synchronizer extends block_base {
     }
 
     /**
-    * Allow the block to have a configuration page
-    *
-    * @return boolean
-    */
+     * Allow the block to have a configuration page
+     *
+     * @return boolean
+     */
 
     public function has_config() {
         return true;

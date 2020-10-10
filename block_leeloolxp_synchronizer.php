@@ -29,17 +29,13 @@
  */
 defined('MOODLE_INTERNAL') || die;
 require_once( $CFG->dirroot.'/course/lib.php' );
+
 /**
- * class block_leeloolxp_synchronizer
+ * Block sync info
  *
- * @package    block_leeloolxp_synchronizer
-
- *
-
+ * @copyright  2020 Leeloo LXP (https://leeloolxp.com)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-
  */
-
 class block_leeloolxp_synchronizer extends block_base {
     /**
      * Show attendance information of user.
@@ -126,9 +122,8 @@ class block_leeloolxp_synchronizer extends block_base {
             $html .= "<a href='#' onclick='single_activity(".$courseid.");'>Sync Single Activity</a>";
             $html .= '<script> function show_popup() {
                         document.getElementById("dialog-modal-course-synchronizer").style.display = "block";
-                    } 
-                
-                function course_cls_popup() {
+                    }
+                    function course_cls_popup() {
                     document.getElementById("dialog-modal-course-synchronizer").style.display = "none";
                 }
 

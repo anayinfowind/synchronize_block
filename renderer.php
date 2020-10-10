@@ -24,13 +24,13 @@
 
 defined( 'MOODLE_INTERNAL' ) || die;
 
-/**
-* leeloolxp_tracking block rendrer
-*
-* @package    block_leeloolxp_tracking
-* @copyright  2020 leeloolxp.com
-* @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-*/
+ /**
+  * leeloolxp_tracking block rendrer
+  *
+  * @package    block_leeloolxp_tracking
+  * @copyright  2020 leeloolxp.com
+  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+  */
 
 class block_leeloolxp_synchronizer_renderer extends plugin_renderer_base {
 

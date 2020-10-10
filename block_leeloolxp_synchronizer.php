@@ -27,6 +27,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
  */
+defined('MOODLE_INTERNAL') || die;
 require_once( $CFG->dirroot.'/course/lib.php' );
 /**
  * class block_leeloolxp_synchronizer
@@ -40,19 +41,14 @@ require_once( $CFG->dirroot.'/course/lib.php' );
  */
 
 class block_leeloolxp_synchronizer extends block_base {
-
-    protected $timestart = null;
+    /**
+     * Show attendance information of user.
+     */
 
     /**
-
-    * Initialises the block
-
-    */
-
+     * Block initialization
+     */
     public function init() {
-
-        // Commented dynamic call for now.
-
         $this->title = get_string( 'pluginname', 'block_leeloolxp_synchronizer' );
 
     }
@@ -62,10 +58,9 @@ class block_leeloolxp_synchronizer extends block_base {
      *
      * @return string of block
      */
-
     public function  get_content() {
 
-        if ( $this->content !== NULL ) {
+        if ( $this->content !== null ) {
 
             return $this->content;
 
@@ -78,11 +73,11 @@ class block_leeloolxp_synchronizer extends block_base {
             return $this->content;
 
         }
-        global $PAGE;
         global $DB;
         global $CFG;
         if ( $this->page->pagetype == 'course-view-topics' ) {
-            $liacencekey = get_config( 'block_leeloolxp_synchronizer' )->leeloolxp_block_synchronizer_licensekey;
+            $liacencekey = get_config( 'block_leeloolxp_synchronizer' )
+            ->leeloolxp_block_synchronizer_licensekey;
             $courseid  = $_REQUEST['id'];
             $alreadysync = false;
             $baseurl = $CFG->wwwroot;
@@ -90,30 +85,33 @@ class block_leeloolxp_synchronizer extends block_base {
             array( 'courseid' => $courseid ) );
 
             if ( empty( $coursesyncedquery ) ) {
-                $html = '<div id="dialog-modal-course-synchronizer" class="dialog-modal dialog-modal-course " style="display: none;">
+                $html = '<div id="dialog-modal-course-synchronizer"
+                class="dialog-modal dialog-modal-course " style="display: none;">
                             <div class="dialog-modal-inn">
                                 <div id="dialog" >
-                                    <h4>Are you sure you want to sync all the activities and resources of this course to Leeloo LXP?</h4>
+                                    <h4>Are you sure you want to sync all the activities
+                                    and resources of this course to Leeloo LXP?</h4>
                                     <div class="sure-btn">
-                                        <button data_id = "" data_name="" onclick="yescourseunsync('.$courseid.');" 
+                                        <button data_id = "" data_name=""
+                                        onclick="yescourseunsync('.$courseid.');"
                                         class="btn btn_yes_courseunsync" >Yes, I’m sure</button>
                                         <button  onclick="course_cls_popup();" class="btn course_cls_popup" >Cancel</button>
                                     </div>
-                                    
-                                </div>
+                                    </div>
                             </div>
                         </div>';
             } else {
-                $html = '<div id="dialog-modal-course-synchronizer" class="dialog-modal dialog-modal-course " style="display: none;">
+                $html = '<div id="dialog-modal-course-synchronizer"
+                class="dialog-modal dialog-modal-course " style="display: none;">
                             <div class="dialog-modal-inn">
                                 <div id="dialog" >
-                                    <h4>Are you sure you want to RE-sync all the activities and resources of this course to Leeloo LXP?</h4>
+                                    <h4>Are you sure you want to RE-sync all the activities
+                                    and resources of this course to Leeloo LXP?</h4>
                                     <div class="sure-btn">
-                                        <button data_id = "" data_name="" onclick="resync('.$courseid.');" 
+                                        <button data_id = "" data_name="" onclick="resync('.$courseid.');"
                                         class="btn btn_yes_courseunsync" >Yes, I’m sure</button>
                                         <button  onclick="course_cls_popup();" class="btn course_cls_popup" >Cancel</button>
                                     </div>
-                                   
                                 </div>
                             </div>
                         </div>';
@@ -135,19 +133,20 @@ class block_leeloolxp_synchronizer extends block_base {
                 }
 
                 function yescourseunsync(courseid) {
-                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/?action=coursesyncfrmblock&redirect=couseview&courseid="+courseid;
+                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/
+                    ?action=coursesyncfrmblock&redirect=couseview&courseid="+courseid;
                     window.location = url;
                 }
                 function resync(courseid) {
-                    
-                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/?resync=1&redirect=courseview&courseid_resync="+courseid;
+                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/
+                    ?resync=1&redirect=courseview&courseid_resync="+courseid;
                     window.location = url;
                 }
                 function single_activity(courseid) {
-                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/?action=add&redirect=couseview&courseid="+courseid;
+                    var url = "'.$baseurl.'/admin/tool/leeloolxp_sync/
+                    ?action=add&redirect=couseview&courseid="+courseid;
                     window.location = url;
                 }
-                
                 </script>';
         }
         $this->content->text = $html;
@@ -161,7 +160,6 @@ class block_leeloolxp_synchronizer extends block_base {
      *
      * @return boolean
      */
-
     public function has_config() {
         return true;
     }

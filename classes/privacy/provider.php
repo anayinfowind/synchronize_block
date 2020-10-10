@@ -50,6 +50,11 @@ class provider implements
      * @param collection $collection The initialised collection to add items to.
      * @return collection A listing of user data stored through this system.
      */
+    /**
+     * Return contents of block_leeloolxp_tracking block
+     *
+     * @return string of block
+     */
     public static function get_metadata(collection $collection): collection {
 
         // This plugin defines a db table but it is not considered personal data and, therefore, not exported or deleted.
